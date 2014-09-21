@@ -5,11 +5,11 @@ Demonstration example of how to implement the ShapeOp C++ library (shapeop.org) 
 
 Assembly Dependecies:
 
-ghpython.gha
-Plankton.dll
-Plankton.gha
-ShapeOp.dll
-vcomp120.dll
+ghpython.gha <br />
+Plankton.dll <br />
+Plankton.gha <br />
+ShapeOp.dll <br />
+vcomp120.dll <br />
 
 Note that the folder where the ShapeOp.dll and vcomp120.dll are located needs to be added to the Window path. We suggest placing them in the Grasshopper libraries folder and doing the following:
 
