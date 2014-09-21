@@ -1,4 +1,4 @@
-ShapeOp_GHPython
+ShapeOpGHPython
 ================
 
 Demonstration example of how to implement the ShapeOp C++ library (shapeop.org) in Grasshopper using Python and the foreign function library ctypes (docs.python.org/2/library/ctypes). Implements the Plankton mesh library (github.com/Dan-Piker/Plankton).
