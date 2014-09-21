@@ -19,4 +19,4 @@ Note that the folder where the ShapeOp.dll and vcomp120.dll are located needs to
 4) Append the Grasshopper libraries folder path to the Path variable (in the System variables list).<br/>
 5) Restart Rhino.<br/>
 
-The planarity rendering cluster uses a Kangaroo component. You will need to install Kangaroo to use this. This is not a critical feature to the ShapeOp implementation.
+The planarity rendering cluster uses a Kangaroo component. You will need to install Kangaroo (food4rhino.com/project/kangaroo) to use this. This is not a critical feature to the ShapeOp implementation.
