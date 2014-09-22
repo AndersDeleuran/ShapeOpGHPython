@@ -3,8 +3,8 @@ Demonstration example of how to implement the ShapeOp C++ library (shapeop.org)
 in Grasshopper using Python and the foreign function library ctypes (docs.python.org/2/library/ctypes).
 Uses the Plankton mesh library (github.com/Dan-Piker/Plankton).
 -
-Name: ShapeOpDynamicExample
-Updated: 140919
+Name: ShapeOpGHPython_Dynamic_PlanarityAndCircle
+Updated: 140922
 Author: Anders Holden Deleuran (CITA/KADK)
 Copyright: Mozilla Public License Version 2.0
 Contact: adel@kadk.dk
@@ -17,13 +17,15 @@ Contact: adel@kadk.dk
         LaplacianW: Laplacian constraint weight (0.0-2000-ish).
         PlanarityW: Planarity constraint weight (0.0-2000-ish).
         CircleW: Circle constraint weight (0.0-2000-ish).
-        Iterations: Amount of sub-iterations to run at each solves step (1-20-ish).
+        SubIterations: Amount of sub-iterations to run at each solves step (1-20-ish).
         Mass: Particle mass value (0.0-1.0).
         Damping: Particle damping value (0.0-1.0).
-        TimeStep: ?
+        TimeStep: TODO
+        Dynamic: It True the solver is initialized using Mass and Damping.
         Run: Toggle the solver on/off.
         Reset: Resets the mesh and updates all constraints.
     Returns:
+        Iterations: Number of iterative solve calls.
         Mesh: The optimized/form found mesh.
 """
 
@@ -167,6 +169,7 @@ if Mesh:
     pMesh = "pMesh_" + guid
     vCoords = "vCoords_" + guid
     anchors = "anchors_" + guid
+    iterations = "iterations_" + guid
     
     # Make solver and add constraints
     if solver not in st:
@@ -186,7 +189,13 @@ if Mesh:
         addCircleConstraints(st[solver],st[pMesh],CircleW)
         
         # Initialize the solver
-        so.shapeop_initDynamic(st[solver],Mass,Damping,TimeStep)
+        if Dynamic:
+            so.shapeop_initDynamic(st[solver],Mass,Damping,TimeStep)
+        else:
+            so.shapeop_init(st[solver])
+            
+        # Make iteration counter
+        st[iterations] = 0
         
     # Run solver live
     if Run:
@@ -200,7 +209,8 @@ if Mesh:
             
         # Solve and get the vertex coordinates
         startTime = time.time()
-        so.shapeop_solve(st[solver],Iterations)
+        so.shapeop_solve(st[solver],SubIterations)
+        st[iterations] += 1
         so.shapeop_getPoints(st[solver],ct.byref(st[vCoords]),st[pMesh].Vertices.Count)
         print "SolveTime:",int((time.time()-startTime)*1000),'ms'
         
@@ -214,12 +224,16 @@ if Mesh:
     Mesh.FaceNormals.ComputeFaceNormals()
     Mesh.Normals.ComputeNormals()
     
+    # Increment iterations
+    Iterations = st[iterations] 
+    
     # Reset model
     if Reset:
         del st[solver]
         del st[pMesh]
         del st[vCoords]
         del st[anchors]
+        del st[iterations]
         
     # Update the component
     ghComponentTimer(Run,5)
