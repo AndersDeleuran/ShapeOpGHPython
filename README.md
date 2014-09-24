@@ -1,7 +1,7 @@
 ShapeOpGHPython
 ================
 
-Demonstration example of how to implement the [ShapeOp C++ geometry processing library](http://shapeop.org/) in [Rhino/Grasshopper](http://www.grasshopper3d.com/) 64 Bit using [GHPython](http://www.food4rhino.com/project/ghpython) and the Python standard foreign function library [ctypes](https://docs.python.org/2/library/ctypes.html). The examples in these demos implement the [Plankton mesh library](https://github.com/Dan-Piker/Plankton). The planarity rendering cluster uses a Kangaroo component. You will need to install Kangaroo to use this. This is not a critical feature to the ShapeOp implementation.
+Implementation of the [ShapeOp C++ geometry processing library](http://shapeop.org/) in [Rhino/Grasshopper](http://www.grasshopper3d.com/) 64 Bit using [GHPython](http://www.food4rhino.com/project/ghpython) and the Python standard foreign function library [ctypes](https://docs.python.org/2/library/ctypes.html). The examples in these demos implement the [Plankton mesh library](https://github.com/Dan-Piker/Plankton). The planarity rendering cluster uses a Kangaroo component. You will need to install Kangaroo to use this. This is not a critical feature to the ShapeOp implementation.
 
  The implementation thus has the following assembly dependencies which will need to be installed on your system:
 
