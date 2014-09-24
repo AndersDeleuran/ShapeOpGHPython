@@ -9,7 +9,7 @@ Plankton.gha <br/>
 ShapeOp.dll <br/>
 vcomp120.dll <br/>
 
-**Installing ghpython.gha, Plankton.dll and Plankton.gh:**
+**Installing ghpython.gha, Plankton.dll and Plankton.gh:**<br/>
 1) Move the files to the Grasshopper Libraries folder (Grasshopper -> File -> Special Folders -> Components Folder).
 2) Unblock them (Right-click the files individually -> Properties -> Unblock -> Ok ).
 
