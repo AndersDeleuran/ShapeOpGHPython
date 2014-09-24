@@ -24,7 +24,7 @@ To use Plankton in a Python script you have to add the Grasshopper Libraries fol
 4) Add a reference to the Grasshopper Libraries folder. <br/>
 
 **Installing  ShapeOp.dll and vcomp120.dll**<br/>
-You can either place these files in the default Windows folder (C:\Windows) or the Grasshopper Libraries folder. In the latter case you will have to add the Grasshopper Libraries folder path to the Window path:
+You can either place these files in the default Windows folder (C:\Windows) or the Grasshopper Libraries folder (remember to unblock the files). In the latter case you will have to add the Grasshopper Libraries folder path to the Window path:
 
 1) Navigate to "Control Panel\System and Security\System".<br/>
 2) Click "Advanced System Settings".<br/>
