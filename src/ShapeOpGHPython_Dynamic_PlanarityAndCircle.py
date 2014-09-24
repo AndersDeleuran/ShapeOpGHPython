@@ -4,7 +4,7 @@ in Grasshopper using Python and the foreign function library ctypes (docs.python
 Uses the Plankton mesh library (github.com/Dan-Piker/Plankton).
 -
 Name: ShapeOpGHPython_Dynamic_PlanarityAndCircle
-Updated: 140922
+Updated: 140924
 Author: Anders Holden Deleuran (CITA/KADK)
 Copyright: Mozilla Public License Version 2.0
 Contact: adel@kadk.dk
@@ -17,7 +17,7 @@ Contact: adel@kadk.dk
         LaplacianW: Laplacian constraint weight (0.0-2000-ish).
         PlanarityW: Planarity constraint weight (0.0-2000-ish).
         CircleW: Circle constraint weight (0.0-2000-ish).
-        SubIterations: Amount of sub-iterations to run at each solves step (1-20-ish).
+        SubIterations: Amount of sub-iterations to run at each solve step (1-20-ish).
         Mass: Particle mass value (0.0-1.0).
         Damping: Particle damping value (0.0-1.0).
         TimeStep: TODO
@@ -25,7 +25,7 @@ Contact: adel@kadk.dk
         Run: Toggle the solver on/off.
         Reset: Resets the mesh and updates all constraints.
     Returns:
-        Iterations: Number of iterative solve calls.
+        Iterations: Number of iterative solve steps.
         Mesh: The optimized/form found mesh.
 """
 
@@ -225,7 +225,7 @@ if Mesh:
     Mesh.Normals.ComputeNormals()
     
     # Increment iterations
-    Iterations = st[iterations] 
+    Iterations = st[iterations]*SubIterations
     
     # Reset model
     if Reset:
