@@ -31,3 +31,6 @@ You can either place these files in the default Windows folder (C:\Windows) or t
 3) Click "Environment Variables".<br/>
 4) Append the Grasshopper Libraries folder path to the Path variable (in the System variables list).<br/>
 5) Restart Rhino.<br/>
+
+**Video Demo**<br/>
+https://www.youtube.com/watch?v=3XlfwB4OYGw
