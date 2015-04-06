@@ -9,7 +9,7 @@ vcomp120.dll <br/>
 
 **Installing ghpython.gha**<br/>
 1) Move the file to the Grasshopper Libraries folder "%appdata%\Grasshopper\Libraries". <br/>
-2) Unblock it "Right-click the files individually -> Properties -> Unblock -> Ok". <br/>
+2) Unblock it "Right-click the file -> Properties -> Unblock -> Ok". <br/>
 
 **Installing  ShapeOp.dll and vcomp120.dll**<br/>
 You can either place these files in the default Windows folder (C:\Windows) or the Grasshopper Libraries folder. Remember to unblock the files in both cases. If you place the files in the Grasshopper libraries folder you need to do the following:
