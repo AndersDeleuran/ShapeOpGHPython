@@ -29,6 +29,6 @@ Add the Grasshopper Libraries folder path to the RhinoPython paths list:
 3) Here you will see an overview of the directories which are currently referenced.<br/>
 4) Add a reference to the Grasshopper Libraries folder (it may be hidden, of so unhide it).<br/>
 
+![alt tag](https://raw.githubusercontent.com/AndersDeleuran/ShapeOpGHPython/master/examples/150331_QuadMeshWithCircularUV_00.png)
+![alt tag](https://raw.githubusercontent.com/AndersDeleuran/ShapeOpGHPython/master/examples/150401_ComplexMeshTopology_00.png)
 
-**Video Demo**<br/>
-https://www.youtube.com/watch?v=3XlfwB4OYGw
