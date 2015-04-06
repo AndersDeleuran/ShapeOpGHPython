@@ -16,19 +16,18 @@ You can either place these files in the default Windows folder (C:\Windows) or t
 
 Add the Grasshopper Libraries folder path to the Windows path:
 
-1) Navigate to "Control Panel\System and Security\System".
-2) Click "Advanced System Settings".
-3) Click "Environment Variables".
-4) Append the Grasshopper Libraries folder path to the Path variable (in the System variables list).
-5) Restart Rhino.
+1) Navigate to "Control Panel\System and Security\System".<br/>
+2) Click "Advanced System Settings".<br/>
+3) Click "Environment Variables".<br/>
+4) Append the Grasshopper Libraries folder path to the Path variable (in the System variables list).<br/>
+5) Restart Rhino.<br/>
 
 Add the Grasshopper Libraries folder path to the RhinoPython paths list:
 
-1) In Rhino type in the command "EditPythonScript". <br/>
-2) In this Python editor go "Tools -> Options -> Files". <br/>
-3) Here you will see an overview of the directories which are currently referenced. <br/>
-4) Add a reference to the Grasshopper Libraries folder. <br/>
-
+1) In Rhino type in the command "EditPythonScript".<br/>
+2) In this Python editor go "Tools -> Options -> Files".<br/>
+3) Here you will see an overview of the directories which are currently referenced.<br/>
+4) Add a reference to the Grasshopper Libraries folder (it may be hidden, of so unhide it).<br/>
 
 
 **Video Demo**<br/>
