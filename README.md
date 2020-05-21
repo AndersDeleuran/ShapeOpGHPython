@@ -3,9 +3,9 @@ ShapeOpGHPython
 
 Implementation of the [ShapeOp C++ geometry processing library](http://shapeop.org/) in [Rhino/Grasshopper](http://www.grasshopper3d.com/) 64 Bit using [GHPython](http://www.food4rhino.com/project/ghpython) and the Python standard foreign function library [ctypes](https://docs.python.org/2/library/ctypes.html). The implementation has the following dependencies which will need to be installed on your system (see dependencies folder):
 
-ghpython.gha <br/>
-ShapeOp.dll <br/>
-vcomp120.dll <br/>
+`ghpython.gha` <br/>
+`ShapeOp.dll` <br/>
+`vcomp120.dll` <br/>
 
 **Installing ghpython.gha**<br/>
 1) Move the file to the Grasshopper Libraries folder (%appdata%\Grasshopper\Libraries). <br/>
